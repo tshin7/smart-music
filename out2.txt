@@ -1,0 +1,58 @@
+live_loop :A do
+
+sleep 1.97 
+
+sleep 1.84 
+
+play 96 
+
+sleep 0.34 
+
+play 93 
+
+play 63 
+
+sleep 1.93 
+
+sleep 0.74 
+
+sleep 1.51 
+
+play 79 
+
+end
+
+live_loop :W do
+
+play 25 
+
+play 46 
+
+sleep 1.93 
+
+end
+
+live_loop :EE do
+
+sleep 1.31 
+
+play 66 
+
+sleep 0.6 
+
+end
+
+live_loop :MM do
+
+play 82 
+
+play 78 
+
+play 94 
+
+play 28 
+
+sleep 1.84 
+
+end
+
