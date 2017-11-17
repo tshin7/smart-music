@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "nodemon server/server.js --fe_ip 127.0.0.0",
     "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
     "express": "^4.16.1",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.3",
+    "morgan": "^1.9.0",
     "nodemon": "^1.12.1",
+    "optimist": "^0.6.1",
     "python-shell": "^0.4.0"
   }
 }

@@ -2,17 +2,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PythonShell = require('python-shell');
+const mongoose = require('mongoose'); // mongoose for mongodb
 const morgan = require('morgan'); // log requests to the console
 const bodyParser = require('body-parser'); // pull information from HTML POST
-var methodOverride = require('method-override'); // simulate DELETE and PUT
-var argv = require('optimist').argv;
+const methodOverride = require('method-override'); // simulate DELETE and PUT
+const argv = require('optimist').argv;
 
 const PORT = process.env.PORT || 5000;
 
 // configuration
-mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
+// mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
 
-app.use(morgan('dev'); // log every request to the console
+app.use(morgan('dev')); // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'})); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
 app.use(methodOverride());
