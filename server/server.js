@@ -8,7 +8,7 @@ const bodyParser = require('body-parser'); // pull information from HTML POST
 const methodOverride = require('method-override'); // simulate DELETE and PUT
 const argv = require('optimist').argv;
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 // configuration
 // mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
@@ -19,7 +19,7 @@ app.use(bodyParser.json()); // parse application/json
 app.use(methodOverride());
 
 // Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+// app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 
 // Answer API requests.
 app.get('/api', function (req, res) {
@@ -48,9 +48,9 @@ app.get('/python', function (req, res) {
 });
 
 // All remaining requests return the React app, so it can handle routing.
-app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
-});
+// app.get('*', function(request, response) {
+//   response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
+// });
 
 app.listen(PORT, argv.fe_ip, function () {
   console.log(`Listening on port ${PORT}`);
