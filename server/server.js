@@ -51,11 +51,6 @@ app.get('/python', function(req, res) {
   res.send('');
 });
 
-// All remaining requests return the React app, so it can handle routing.
-// app.get('*', function(request, response) {
-//   response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
-// });
-
 // app.listen(PORT, argv.fe_ip, function () {
 //   // console.log(`Listening on port ${PORT}`);
 //   console.log('Listening on port ' + PORT);
