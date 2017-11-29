@@ -1,0 +1,13 @@
+certifi==2017.11.5
+chardet==3.0.4
+idna==2.6
+Naked==0.1.31
+numpy==1.13.3
+pymongo==3.5.1
+python-dateutil==2.6.1
+python-osc==1.6.3
+python-sonic==0.3.0
+PyYAML==3.12
+requests==2.18.4
+six==1.11.0
+urllib3==1.22
