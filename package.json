@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js --fe_ip 127.0.0.1",
-    "gcp": "nohup nodejs server.js --fe_ip 10.142.0.2 &",
+    "start": "nodemon server/index.js --fe_ip 127.0.0.1",
+    "gcp": "nohup nodejs index.js --fe_ip 10.142.0.2 &",
     "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
@@ -24,6 +24,8 @@
     "morgan": "^1.9.0",
     "nodemon": "^1.12.1",
     "optimist": "^0.6.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "python-shell": "^0.4.0"
   }
 }
