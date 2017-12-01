@@ -10,10 +10,27 @@ const session = require('express-session');
 const PythonShell = require('python-shell')
 const methodOverride = require('method-override'); // simulate DELETE and PUT
 const argv = require('optimist').argv;
+const CircularJSON = require('circular-json');
+const cycle = require('cycle');
+var stringify = require('json-stringify-safe');
 
 const configureServer = (app, passport) => {
+  const options = {
+    scriptPath: path.resolve(__dirname, '../python'),
+  };
+  var pyshell = new PythonShell('prototype_v05.py', options);
+
+
   // configuration
   // mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
+
+  // express session middleware
+  app.set('trust proxy', 1) // trust first proxy
+  app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+  }));
 
   app.use(morgan('dev')); // log every request to the console
   app.use(helmet());
@@ -45,24 +62,53 @@ const configureServer = (app, passport) => {
     res.send('{"message":"Hello from the custom server!"}');
   });
 
-  app.get('/python', function(req, res) {
+  app.get('/start', function(req, res) {
+    pyshell.send('add_instrument');
+    res.send('Start');
+  });
+
+  app.get('/play', function(req, res) {
+    pyshell.send('play');
+    res.send('Play')
+  });
+
+  app.get('/stop', function(req, res) {
+    pyshell.send('stop');
+    res.send('Stop');
+  });
+
+  app.get('/add-instrument', function(req, res) {
+    pyshell.send('add_instrument');
+    res.send('Added instrument');
+  });
+
+  app.get('/api/python', function(req, res) {
 
     const options = {
       scriptPath: path.resolve(__dirname, '../python'),
     };
-    var pyshell = new PythonShell('assignment.py', options);
+    var pyshell = new PythonShell('prototype_v05.py', options);
+    pyshell.send('play')
     pyshell.on('message', function (message) {
       // received a message sent from the Python script (a simple "print" statement)
       console.log(message);
       res.send(message);
     });
 
+    if (req.session.num) {
+      req.session.num++;
+    } else {
+      req.session.num = 1;
+    }
+    console.log('###');
+    console.log(req.session);
+
     // end the input stream and allow the process to exit
-    pyshell.end(function (err) {
-      if (err) throw err;
-      console.log('finished');
-    });
-    res.send('');
+    // pyshell.end(function (err) {
+    //   if (err) throw err;
+    //   console.log('finished');
+    // });
+
   });
 
 };
