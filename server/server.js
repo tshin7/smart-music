@@ -46,7 +46,9 @@ const configureServer = (app, passport) => {
   app.use('/controllers', express.static(path.resolve(__dirname, '../client/controllers')));
 
   app.get('/', function(req, res) {
-    res.send('hello world');
+    res.render('home.ejs', {
+      user: req.user // get the user out of session and pass to template
+    });
   });
 
   app.get('/home', function(req, res) {
@@ -69,7 +71,7 @@ const configureServer = (app, passport) => {
 
   app.get('/play', function(req, res) {
     pyshell.send('play');
-    res.send('Play')
+    res.send('Play');
   });
 
   app.get('/stop', function(req, res) {
