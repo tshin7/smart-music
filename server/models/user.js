@@ -7,6 +7,7 @@ const userSchema = Schema({
   local: {
     email: String,
     password: String
+  }
 });
 
 // methods ======================
