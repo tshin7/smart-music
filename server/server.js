@@ -10,10 +10,26 @@ const session = require('express-session');
 const PythonShell = require('python-shell')
 const methodOverride = require('method-override'); // simulate DELETE and PUT
 const argv = require('optimist').argv;
+const cycle = require('cycle');
+var stringify = require('json-stringify-safe');
 
 const configureServer = (app, passport) => {
+  const options = {
+    scriptPath: path.resolve(__dirname, '../python'),
+  };
+  var pyshell = new PythonShell('prototype_v05.py', options);
+
+
   // configuration
-  // mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
+  mongoose.connect('mongodb://admin1:12345@ds125016.mlab.com:25016/music_db');
+
+  // express session middleware
+  app.set('trust proxy', 1) // trust first proxy
+  app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+  }));
 
   app.use(morgan('dev')); // log every request to the console
   app.use(helmet());
@@ -27,43 +43,6 @@ const configureServer = (app, passport) => {
 
   // Serve static files with express static middleware function
   app.use('/controllers', express.static(path.resolve(__dirname, '../client/controllers')));
-
-  app.get('/', function(req, res) {
-    res.send('hello world');
-  });
-
-  app.get('/home', function(req, res) {
-    // console.log(req.user);
-    res.render('home.ejs', {
-      user: req.user // get the user out of session and pass to template
-    });
-  });
-
-  // Answer API requests.
-  app.get('/api', function(req, res) {
-    res.set('Content-Type', 'application/json');
-    res.send('{"message":"Hello from the custom server!"}');
-  });
-
-  app.get('/python', function(req, res) {
-
-    const options = {
-      scriptPath: path.resolve(__dirname, '../python'),
-    };
-    var pyshell = new PythonShell('assignment.py', options);
-    pyshell.on('message', function (message) {
-      // received a message sent from the Python script (a simple "print" statement)
-      console.log(message);
-      res.send(message);
-    });
-
-    // end the input stream and allow the process to exit
-    pyshell.end(function (err) {
-      if (err) throw err;
-      console.log('finished');
-    });
-    res.send('');
-  });
 
 };
 
