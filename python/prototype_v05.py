@@ -3,6 +3,7 @@ from atexit import register
 from copy import deepcopy
 from operator import itemgetter
 
+import random
 import numpy as np
 from psonic import *
 from pymongo import MongoClient
