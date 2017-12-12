@@ -1,7 +1,9 @@
 // Start page
 let User = require('../models/user.js');
 
-const sonicPiApi = (app) => {
+const sonicPiApi = (app, isLoggedIn, pyshell) => {
+
+
   // Answer API requests.
   const apiTest = (req, res) => {
     res.set('Content-Type', 'application/json');
@@ -29,11 +31,11 @@ const sonicPiApi = (app) => {
     res.send('Added instrument');
   };
 
-  app.get('/api', isLoggedIn, apiTest);
-  app.get('/start', isLoggedIn, startMusic);
-  app.get('/play', isLoggedIn, playMusic);
-  app.get('/stop', isLoggedIn, stopMusic);
-  app.get('/add-instrument', isLoggedIn, addInstrument);
+  app.get('/api', apiTest);
+  app.get('/start', startMusic);
+  app.get('/play', playMusic);
+  app.get('/stop', stopMusic);
+  app.get('/add-instrument', addInstrument);
 
   return app;
 }

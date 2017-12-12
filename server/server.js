@@ -7,28 +7,24 @@ const morgan = require('morgan'); // log requests to the console
 const bodyParser = require('body-parser'); // pull information from HTML POST
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const PythonShell = require('python-shell')
+
 const methodOverride = require('method-override'); // simulate DELETE and PUT
 const argv = require('optimist').argv;
 const cycle = require('cycle');
 var stringify = require('json-stringify-safe');
 
 const configureServer = (app, passport) => {
-  const options = {
-    scriptPath: path.resolve(__dirname, '../python'),
-  };
-  var pyshell = new PythonShell('prototype_v05.py', options);
-
 
   // configuration
   mongoose.connect('mongodb://admin1:12345@ds125016.mlab.com:25016/music_db');
+  require('./config/passport')(passport); // pass passport for configuration
 
   // express session middleware
   app.set('trust proxy', 1) // trust first proxy
   app.use(session({
-    secret: 'keyboard cat',
+    secret: 'ldkjfl234KDof021kcvooq32lnmcL',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
   }));
 
   app.use(morgan('dev')); // log every request to the console

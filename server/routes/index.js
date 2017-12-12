@@ -2,7 +2,8 @@
 
 const start = require('./start');
 const home = require('./home');
-const sonicPiApi = require9('./sonicPiApi');
+const sonicPiApi = require('./sonicPiApi');
+const authentication = require('./authentication');
 
 // route middleware to make sure a user is logged in
 const isLoggedIn = (req, res, next) => {
@@ -14,10 +15,11 @@ const isLoggedIn = (req, res, next) => {
   res.redirect('/');
 }
 
-const configureRoutes = (app, passport) => {
+const configureRoutes = (app, passport, pyshell) => {
   start(app);
   home(app, isLoggedIn);
-  sonicPiApi(app, isLoggedIn);
+  sonicPiApi(app, isLoggedIn, pyshell);
+  authentication(app, passport);
 
 };
 

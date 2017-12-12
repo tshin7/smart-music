@@ -261,12 +261,12 @@ class GA:
             # Duplicate instruments are prevented from upload for this reason.
 
     """Instrument Data Structure: Header: indices 0 - 6, where indices 2 and 5 are synth and fx values respectively.
-                                  DATA: indices 7 - (instrument_size*18 - 1), where:  
-                                    play is followed by 7 floats,                           
+                                  DATA: indices 7 - (instrument_size*18 - 1), where:
+                                    play is followed by 7 floats,
                                     sleep   is followed by 1 float which can take on the values:
                                     [0.0, 0.25, 0.33, 0.5, 0.66, 0.75, 1.0, 1.25],
                                     The sleep and play values alternate between each other.
-        I believe this data structure is better than an object because we can access it easier for crossover and 
+        I believe this data structure is better than an object because we can access it easier for crossover and
         mutation functions, and we can assume its structure. But this is open to ideas."""
 
     """Class Methods"""
