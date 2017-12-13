@@ -1,0 +1,173 @@
+/home/edwinzzhou/smart-music/server/routes/start.js:2
+let User = require('../models/user.js');
+^^^
+
+SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:373:25)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/routes/index.js:3:15)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/index.js:9:25)
+    at Module._compile (module.js:409:26)
+/home/edwinzzhou/smart-music/server/routes/start.js:2
+let User = require('../models/user.js');
+^^^
+
+SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:373:25)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/routes/index.js:3:15)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/index.js:9:25)
+    at Module._compile (module.js:409:26)
+/home/edwinzzhou/smart-music/server/routes/start.js:2
+let User = require('../models/user.js');
+^^^
+
+SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:373:25)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/routes/index.js:3:15)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/index.js:9:25)
+    at Module._compile (module.js:409:26)
+/home/edwinzzhou/smart-music/server/routes/start.js:2
+let User = require('../models/user.js');
+^^^
+
+SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:373:25)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/routes/index.js:3:15)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/index.js:9:25)
+    at Module._compile (module.js:409:26)
+/home/edwinzzhou/smart-music/server/routes/start.js:2
+let User = require('../models/user.js');
+^^^
+
+SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:373:25)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/routes/index.js:3:15)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/index.js:9:25)
+    at Module._compile (module.js:409:26)
+/home/edwinzzhou/smart-music/server/index.js:21
+app.listen(8080, argv.fe_ip);
+                 ^
+
+ReferenceError: argv is not defined
+    at Object.<anonymous> (/home/edwinzzhou/smart-music/server/index.js:21:18)
+    at Module._compile (module.js:641:30)
+    at Object.Module._extensions..js (module.js:652:10)
+    at Module.load (module.js:560:32)
+    at tryModuleLoad (module.js:503:12)
+    at Function.Module._load (module.js:495:3)
+    at Function.Module.runMain (module.js:682:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:613:3
+(node:14939) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+Db.prototype.authenticate method will no longer be available in the next major release 3.x as MongoDB 3.6 will only allow auth against users in the admin db and will no longer allow multiple credentials on a socket. Please authenticate using MongoClient.connect with auth credentials.
+(node:14984) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+events.js:136
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 10.142.0.4:8080
+    at Object._errnoException (util.js:1031:13)
+    at _exceptionWithHostPort (util.js:1052:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1367:14)
+    at listenInCluster (net.js:1408:12)
+    at doListen (net.js:1523:7)
+    at _combinedTickCallback (internal/process/next_tick.js:141:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+    at Function.Module.runMain (module.js:684:11)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:613:3
+(node:15014) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+events.js:136
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 10.142.0.4:8080
+    at Object._errnoException (util.js:1031:13)
+    at _exceptionWithHostPort (util.js:1052:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1367:14)
+    at listenInCluster (net.js:1408:12)
+    at doListen (net.js:1523:7)
+    at _combinedTickCallback (internal/process/next_tick.js:141:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+    at Function.Module.runMain (module.js:684:11)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:613:3
+(node:15048) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+events.js:136
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 10.142.0.4:8080
+    at Object._errnoException (util.js:1031:13)
+    at _exceptionWithHostPort (util.js:1052:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1367:14)
+    at listenInCluster (net.js:1408:12)
+    at doListen (net.js:1523:7)
+    at _combinedTickCallback (internal/process/next_tick.js:141:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+    at Function.Module.runMain (module.js:684:11)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:613:3
+[0mGET / [32m200 [0m8.910 ms - 0[0m
+[0mGET /favicon.ico [33m404 [0m3.954 ms - 150[0m
+[0mGET /home [32m200 [0m2.497 ms - 1529[0m
+[0mGET /controllers/home.js [32m200 [0m3.874 ms - 804[0m
