@@ -14,9 +14,10 @@ const options = {
   scriptPath: path.resolve(__dirname, '../python'),
 };
 var pyshell = new PythonShell('prototype_v05.py', options);
+
 configureServer(app, passport);
 configureRoutes(app, passport, pyshell);
 
-//app.listen(5000);
+// app.listen(5000);
 app.listen(8080, argv.fe_ip);
 // console.log("App listening on port 8080");

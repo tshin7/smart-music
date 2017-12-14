@@ -37,6 +37,11 @@ const configureServer = (app, passport) => {
   app.set('view engine', 'ejs'); // set up ejs for templating
   app.set('views', path.resolve(__dirname, '../client/views/pages')); // change default view directory
 
+
+  app.use(passport.initialize());
+  app.use(passport.session()); // persistent login sessions
+  app.use(flash()); // use connect-flash for flash messages stored in session
+
   // Serve static files with express static middleware function
   app.use('/controllers', express.static(path.resolve(__dirname, '../client/controllers')));
 

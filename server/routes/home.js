@@ -8,7 +8,7 @@ const home = (app, isLoggedIn) => {
     });
   };
 
-  app.get('/home', renderHome);
+  app.get('/home', isLoggedIn, renderHome);
 
   return app;
 }
