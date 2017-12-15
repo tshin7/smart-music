@@ -19,5 +19,6 @@ configureServer(app, passport);
 configureRoutes(app, passport, pyshell);
 
 // app.listen(5000);
-app.listen(8080, argv.fe_ip);
+// app.listen(8080, argv.fe_ip);
+app.listen(8080, '0.0.0.0');
 // console.log("App listening on port 8080");
