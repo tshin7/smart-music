@@ -26,7 +26,10 @@ https://github.com/samaaron/sonic-pi/blob/master/INSTALL-LINUX.md
 
 To run Sonic Pi on Ubuntu:
 ```bash
-pasuspender -- jackd -R -d alsa
+sudo pasuspender -- jackd -R -d alsa
+```
+In new terminal window, run:
+```bash
 sonic-pi
 ```
 
