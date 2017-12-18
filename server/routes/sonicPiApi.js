@@ -29,11 +29,17 @@ const sonicPiApi = (app, isLoggedIn, pyshell) => {
     res.send('Added instrument');
   };
 
+  const resetMusic = (req, res) => {
+    pyshell.send('reset');
+    res.send('Reset');
+  };
+
   app.get('/api', apiTest);
   app.get('/start', isLoggedIn, startMusic);
   app.get('/play', isLoggedIn, playMusic);
   app.get('/stop', isLoggedIn, stopMusic);
   app.get('/add-instrument', isLoggedIn, addInstrument);
+  app.get('/reset', isLoggedIn, resetMusic);
 
   return app;
 }
