@@ -10,6 +10,7 @@ function handleStartClick() {
     console.log(data);
     $('#start-button').hide();
     $('#stop-button').show();
+    $('#add-instrument-button').show();
   });
 };
 
@@ -17,7 +18,7 @@ function handlePlayClick() {
   $.get('/play', function(data) {
     console.log(data);
     $('#play-button').hide();
-    $('#add-instrument-button').hide();
+    //$('#add-instrument-button').hide();
     $('#stop-button').show();
   });
 };
@@ -35,7 +36,17 @@ function handleAddInstrumentClick() {
   $.get('/add-instrument', function(data) {
     console.log(data);
     $('#play-button').hide();
-    $('#add-instrument-button').hide();
+    //$('#add-instrument-button').hide();
     $('#stop-button').show();
+  });
+};
+
+function handleResetClick() {
+  $.get('/reset', function(data) {
+    console.log(data);
+    $('#stop-button').hide();
+    // $('#reset-button').hide();
+    // //$('#add-instrument-button').hide();
+    // $('#reset-button').show();
   });
 };

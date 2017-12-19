@@ -1,19 +1,4 @@
 const authentication = (app, passport) => {
-  // verify that the user is authenticated
-  const verifyUserAuth = (req, res, next) => {
-  	if(req.user) {
-  		return res.status(200).json({
-  			user: req.user,
-  			authenticated: true
-  		});
-  	} else {
-  		return res.status(401).json({
-  			error: 'User is not authenticated',
-  			authenticated: false
-  		});
-  	}
-  };
-
   // show the signup page
   const renderSignupPage = (req, res) => {
     // render the page and pass in any flash data if it exists
@@ -46,7 +31,6 @@ const authentication = (app, passport) => {
     res.redirect('/');
   };
 
-  app.get('/api/user/verify', verifyUserAuth);
   app.get('/signup', renderSignupPage);
   app.post('/signup', processSignup);
   app.get('/login', renderLoginPage);

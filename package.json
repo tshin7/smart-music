@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js --fe_ip 127.0.0.1",
-    "gcp": "nohup nodejs index.js --fe_ip 10.142.0.2 &",
+    "start": "nodemon server/index.js",
+    "gcp": "nohup node server/index.js &",
     "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
