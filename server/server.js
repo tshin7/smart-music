@@ -16,7 +16,9 @@ var stringify = require('json-stringify-safe');
 const configureServer = (app, passport) => {
 
   // configuration
-  mongoose.connect('mongodb://admin1:12345@ds125016.mlab.com:25016/music_db');
+  // mongoose.connect('mongodb://admin1:12345@ds125016.mlab.com:25016/music_db');
+  mongoose.connect('mongodb://localhost/smart-music');
+
   require('./config/passport')(passport); // pass passport for configuration
 
   // express session middleware

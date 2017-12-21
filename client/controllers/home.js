@@ -8,45 +8,45 @@
 function handleStartClick() {
   $.get('/start', function(data) {
     console.log(data);
-    $('#start-button').hide();
-    $('#stop-button').show();
-    $('#add-instrument-button').show();
+    $('#start-button').prop("disabled", true);
+    $('#stop-button').prop("disabled", false);
+    $('#add-instrument-button').prop("disabled", false);
   });
 };
 
 function handlePlayClick() {
   $.get('/play', function(data) {
     console.log(data);
-    $('#play-button').hide();
-    //$('#add-instrument-button').hide();
-    $('#stop-button').show();
+    $('#play-button').prop("disabled", true);
+    //$('#add-instrument-button').prop("disabled", true);
+    $('#stop-button').prop("disabled", false);
   });
 };
 
 function handleStopClick() {
   $.get('/stop', function(data) {
     console.log(data);
-    $('#stop-button').hide();
-    $('#play-button').show();
-    $('#add-instrument-button').show();
+    $('#stop-button').prop("disabled", true);
+    $('#play-button').prop("disabled", false);
+    $('#add-instrument-button').prop("disabled", false);
   });
 };
 
 function handleAddInstrumentClick() {
   $.get('/add-instrument', function(data) {
     console.log(data);
-    $('#play-button').hide();
-    //$('#add-instrument-button').hide();
-    $('#stop-button').show();
+    $('#play-button').prop("disabled", true);
+    //$('#add-instrument-button').prop("disabled", true);
+    $('#stop-button').prop("disabled", false);
   });
 };
 
 function handleResetClick() {
   $.get('/reset', function(data) {
     console.log(data);
-    $('#stop-button').hide();
-    // $('#reset-button').hide();
-    // //$('#add-instrument-button').hide();
-    // $('#reset-button').show();
+    $('#stop-button').prop("disabled", true);
+    $('#start-button').prop("disabled", false);
+    $('#add-instrument-button').prop("disabled", true);
+    // $('#reset-button').prop("disabled", false);
   });
 };
