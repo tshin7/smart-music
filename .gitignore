@@ -3,4 +3,5 @@ node_modules
 react-ui/build
 *.swp
 venv
-python/__pycache__/
+package-lock.json
+python/__pycache__

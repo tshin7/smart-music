@@ -2,23 +2,35 @@
 <html>
 <head>
   <title>Home</title>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+ <!-- load bootstrap css -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
 </head>
-<body>
+<body style="background-color: #5C45A7">
   <header>
     <% include ../partials/navbar %>
     <div class="page-header text-center">
-      <h1>Home Page</h1>
+      <h1 class="text-light my-4 pb-4">Smart Music</h1>
     </div>
   </header>
   <main>
-    <div class="container">
-      <button id="start-button" class="btn btn-lg" onclick="handleStartClick()">Start</button>
-      <button id="play-button" class="btn btn-lg" disabled onclick="handlePlayClick()">Play</button>
-      <button id="stop-button" class="btn btn-lg" disabled onclick="handleStopClick()">Stop</button>
-      <button id="add-instrument-button" class="btn btn-lg" disabled onclick="handleAddInstrumentClick()">Add Instrument</button>
-      <button id="reset-button" class="btn btn-lg" onclick="handleResetClick()">Reset</button>
+    <div class="container text-center my-4 py-4">
+      <button id="start-button" class="btn btn-lg" style="background-color: #A493D9" onclick="handleStartClick()">
+        Start
+      </button>
+      <button id="play-button" class="btn btn-lg" disabled style="background-color: #A493D9" onclick="handlePlayClick()">
+        Play
+      </button>
+      <button id="stop-button" class="btn btn-lg" disabled style="background-color: #A493D9" onclick="handleStopClick()">
+        Stop
+      </button>
+      <button id="add-instrument-button" class="btn btn-lg" disabled style="background-color: #A493D9" onclick="handleAddInstrumentClick()">
+        Add Instrument
+      </button>
+      <button id="reset-button" class="btn btn-lg" onclick="handleResetClick()" style="background-color: #A493D9">
+        Reset
+      </button>
+
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
