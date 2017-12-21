@@ -59,3 +59,10 @@ function handleResetClick() {
     // $('#reset-button').prop("disabled", false);
   });
 };
+
+function handleRateClick() {
+  let rating = $('#ex1').val();
+  console.log(rating);
+  $('#rating-text').empty();
+  $('#rating-text').append('You rated the most recent instrument as: ' + rating);
+};
