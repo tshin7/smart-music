@@ -5,6 +5,15 @@
 
 })();
 
+$('#ex1').slider({
+
+  formatter: function(value) {
+    console.log("asdf");
+    console.log(value);
+    return 'Current value: ' + value;
+  }
+});
+
 function handleStartClick() {
   $.get('/start', function(data) {
     console.log(data);

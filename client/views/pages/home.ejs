@@ -2,9 +2,15 @@
 <html>
 <head>
   <title>Home</title>
+  <!-- load bootstrap css -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
- <!-- load bootstrap css -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+  <style>
+    #ex1Slider .slider-selection {
+      background: #BABABA;
+    }
+  </style>
 </head>
 <body style="background-color: #5C45A7">
   <header>
@@ -30,10 +36,16 @@
       <button id="reset-button" class="btn btn-lg" onclick="handleResetClick()" style="background-color: #A493D9">
         Reset
       </button>
-
+    </div>
+    <div class="container text-center my-4 py-4">
+      <button id="rate-button" class="btn btn-lg" onclick="handleRateClick()" style="background-color: #A493D9">
+        Rate
+      </button>
+      <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
   <script type="text/javascript" src="/controllers/home.js"></script>
 </body>
 </html>
