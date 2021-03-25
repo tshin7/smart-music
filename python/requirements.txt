@@ -7,7 +7,7 @@ pymongo==3.5.1
 python-dateutil==2.6.1
 python-osc==1.6.3
 python-sonic==0.3.0
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 six==1.11.0
 urllib3==1.22
